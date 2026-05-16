@@ -1,0 +1,12 @@
+{
+  "name": "server",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "DEV_MODE=true PB_DATA_DIR=./pb_data DATA_ROOT=/tmp/wisp-data HTTP_ADDR=127.0.0.1:8080 air",
+    "type-check": "tsc -p internal/proxy/tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}

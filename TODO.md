@@ -1,0 +1,5 @@
+- second screen with menu when opening same app from a different device, we should ask "connect as a second screen"
+- stats make some time to refresh when opening (should maybe refresh in background too ?)
+- ask confirmation when stopping app
+- ask confirmation when deleting app
+- check retroarch app definition for per user mounts (very strange to mount retroarch to /config and then mount retroarch-data/saves & retroarch-data/states. Remove the 2 last would be better IMO)

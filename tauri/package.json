@@ -1,0 +1,24 @@
+{
+  "name": "@wisp-hq/tauri",
+  "version": "0.5.0",
+  "private": true,
+  "description": "Tauri desktop & mobile shell for Wisp — embeds the client PWA and connects to a user-configured Wisp instance.",
+  "scripts": {
+    "dev": "tauri dev",
+    "build": "tauri build",
+    "tauri": "tauri",
+    "android:init": "tauri android init",
+    "android:dev": "tauri android dev",
+    "android:build": "tauri android build",
+    "ios:init": "tauri ios init",
+    "ios:dev": "tauri ios dev",
+    "ios:build": "tauri ios build"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2",
+    "@tauri-apps/plugin-store": "^2"
+  }
+}

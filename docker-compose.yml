@@ -1,0 +1,32 @@
+name: wisp
+
+# Dev/demo stack: the launcher container, plus a Caddy that simulates the external
+# reverse proxy you'd run in production (Pangolin / Traefik / Cloudflare tunnel / etc.).
+# Reach the UI at http://localhost (via Caddy) or http://localhost:8080 (direct).
+services:
+  launcher:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    image: wisp-launcher:dev
+    environment:
+      TZ: ${TZ:-Europe/Paris}
+      GPU: ${GPU:-}
+      PB_SUPERUSER_EMAIL: ${PB_SUPERUSER_EMAIL:-admin@wisp.local}
+      PB_SUPERUSER_PASSWORD: ${PB_SUPERUSER_PASSWORD:-changeme123}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./pb_data:/app/pb_data
+      - ./data:/data
+    networks:
+      - wisp
+    ports:
+      - "8080:8080"
+    security_opt:
+      - seccomp:unconfined
+      - apparmor:unconfined
+    shm_size: "2gb"
+    restart: unless-stopped
+
+networks:
+  wisp:

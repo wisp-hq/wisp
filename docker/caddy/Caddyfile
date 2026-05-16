@@ -1,0 +1,6 @@
+:80 {
+    # Simulates the production reverse proxy (Pangolin) in front of the launcher.
+    # It only knows about one upstream — the launcher itself — and never reaches into
+    # the session containers directly. WebSocket upgrades go through transparently.
+    reverse_proxy launcher:8080
+}

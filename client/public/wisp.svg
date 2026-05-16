@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="wisp-flame" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="22%" stop-color="#7dd3fc"/>
+      <stop offset="55%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <linearGradient id="wisp-core" x1="50%" y1="25%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="55%" stop-color="#bae6fd" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="wisp-halo" cx="50%" cy="62%" r="44%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="eye-tint" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="256" cy="320" r="210" fill="url(#wisp-halo)"/>
+
+  <path fill="url(#wisp-flame)" d="M256 48 C258 130 340 198 356 290 C372 380 322 448 256 464 C190 448 140 380 156 290 C172 198 254 130 256 48 Z"/>
+
+  <path fill="url(#wisp-core)" d="M256 196 C260 252 312 296 320 348 C328 394 296 432 256 442 C216 432 184 394 192 348 C200 296 252 252 256 196 Z"/>
+
+  <ellipse cx="222" cy="332" rx="18" ry="24" fill="url(#eye-tint)"/>
+  <ellipse cx="290" cy="332" rx="18" ry="24" fill="url(#eye-tint)"/>
+</svg>

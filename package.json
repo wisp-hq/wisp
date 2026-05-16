@@ -1,0 +1,38 @@
+{
+  "name": "@wisp-hq/wisp",
+  "version": "0.5.0",
+  "author": "Kevin Bonnoron",
+  "devDependencies": {
+    "@biomejs/biome": "2.4.15",
+    "turbo": "^2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.7.3"
+  },
+  "description": "Selkies launcher — a multi-user front-end for containerised desktop apps",
+  "homepage": "https://github.com/KevinBonnoron/wisp",
+  "keywords": [
+    "selkies",
+    "launcher",
+    "docker",
+    "pocketbase",
+    "react",
+    "go"
+  ],
+  "license": "MIT",
+  "packageManager": "bun@1.2.22",
+  "scripts": {
+    "dev": "turbo dev --filter=client --filter=server",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "type-check": "turbo type-check",
+    "test": "turbo test",
+    "format": "biome format . --write"
+  },
+  "workspaces": [
+    "./client",
+    "./docs",
+    "./server",
+    "./tauri"
+  ]
+}

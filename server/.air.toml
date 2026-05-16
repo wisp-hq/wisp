@@ -1,0 +1,21 @@
+root = "."
+tmp_dir = "tmp"
+
+[build]
+  # ScreenScraper credentials are picked up from the env (set via .envrc.local
+  # / direnv). Unset = empty ldflags = resolver self-disables, which is fine
+  # for dev work that doesn't touch artwork lookups.
+  cmd = "go build -ldflags \"-X 'github.com/KevinBonnoron/wisp/internal/screenscraper.devID=${SCREENSCRAPER_DEV_ID}' -X 'github.com/KevinBonnoron/wisp/internal/screenscraper.devPassword=${SCREENSCRAPER_DEV_PASSWORD}'\" -o ./tmp/wisp ."
+  bin = "./tmp/wisp"
+  args_bin = ["serve"]
+  include_ext = ["go", "js"]
+  exclude_dir = ["pb_data", "spa", "tmp", "node_modules"]
+  delay = 200
+  stop_on_error = true
+  kill_delay = "500ms"
+
+[log]
+  time = false
+
+[misc]
+  clean_on_exit = true
